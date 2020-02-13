@@ -1,0 +1,43 @@
+{
+    "template": "<div ng-if=\"itemValue(config.id_trigger)=='false'\">\n  <button class=\"btn btn-block\" style=\"width: 90%; height: 90%; border: 0; position: absolute; top: 5%; left: 5%; border-radius: 5% 5% 5% 5%;\";\n          ng-style=\"{'background-color': config.color_off,'font-size': config.fontsize, 'color': config.fontcolor}\";\n          ng-click=\"sendCmd(config.id_trigger, 'true')\">\n  {{itemValue(config.id_caption)}}\n  </button>\n</div>\n\n<div ng-if=\"itemValue(config.id_trigger)=='true'\">\n  <button class=\"btn btn-block\" style=\"width: 90%; height: 90%; border: 0; position: absolute; top: 5%; left: 5%; border-radius: 5% 5% 5% 5%\";\n          ng-style=\"{'background-color': config.color_on,'font-size': config.fontsize, 'color': config.fontcolor}\";\n          ng-click=\"sendCmd(config.id_trigger, 'false')\">\n  {{itemValue(config.id_caption)}}\n  </button>\n</div>\n",
+    "settings": [
+        {
+            "type": "item",
+            "id": "id_caption",
+            "label": "id_caption",
+            "description": "Caption"
+        },
+        {
+            "type": "number",
+            "id": "fontsize",
+            "label": "fontsize",
+            "description": "Fontsize in Pixels.",
+            "default": "23"
+        },
+        {
+            "type": "color",
+            "id": "fontcolor",
+            "label": "fontcolor",
+            "description": "Fontcolor",
+            "default": "#ffffff"
+        },
+        {
+            "type": "item",
+            "id": "id_trigger",
+            "label": "id_trigger",
+            "description": "Value to toggle between TRUE and FALSE"
+        },
+        {
+            "type": "color",
+            "id": "color_on",
+            "label": "color_on",
+            "description": "Color for value==ON"
+        },
+        {
+            "type": "color",
+            "id": "color_off",
+            "label": "color_off",
+            "description": "Color for value==OFF"
+        }
+    ]
+}
