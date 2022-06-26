@@ -1,0 +1,33 @@
+{
+    "template": "<div ng-if=\"itemValue(config.id_trigger)=='false'\">\n  <button class=\"btn btn-lg\" style=\"width: 100%; height: 100%; border: 0; background: red; color: white\"; \n          ng-click=\"sendCmd(config.id_trigger, 'true')\">\n  {{itemValue(config.id_caption)}} is OFF\n  </button>\n</div>\n\n<div ng-if=\"itemValue(config.id_trigger)=='true'\">\n  <button class=\"btn btn-lg\" style=\"width: 100%; height: 100%; border: 0; background: green; color: black\"\n          ng-click=\"sendCmd(config.id_trigger, 'false')\">\n  {{itemValue(config.id_caption)}} is ON\n  </button>\n</div>\n",
+    "settings": [
+        {
+            "type": "string",
+            "id": "caption",
+            "label": "Caption"
+        },
+        {
+            "type": "item",
+            "id": "id_trigger",
+            "label": "id_trigger",
+            "description": "Trigger"
+        },
+        {
+            "type": "color",
+            "id": "color_on",
+            "label": "Color when ON",
+            "default": "#567"
+        },
+        {
+            "type": "color",
+            "id": "color_off",
+            "label": "Color when OFF",
+            "default": "#888"
+        },
+        {
+            "type": "number",
+            "id": "fontsize",
+            "label": "Fontsize"
+        }
+    ]
+}
