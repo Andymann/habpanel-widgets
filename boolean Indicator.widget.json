@@ -1,0 +1,20 @@
+{
+    "template": "<style>\n  .fullWidget {\n\t\ttop: 0px;\n    bottom: 0px;\n    left: 0px;\n    right: 0px;\n    height: 100%;\n    position: absolute;\n  \tdisplay: flex;\n    align-items: center;\n    justify-content: center;\n  }  \n</style>\n\n\n<div>\n  <!--<label ng-style=\"{'font-size': config.fontsize||23, 'background-color': itemValue(config.id_trigger)=='true' ? config.color_on || '#00ff00' : config.color_off || '#ff0000'}\" class=\"fullWidget\" >TEST</label>-->\n  <label ng-style=\"{'background-color': itemValue(config.id_indicator)=='true' ? config.color_on || '#00ff00' : config.color_off || '#ff0000'}\" class=\"fullWidget\" ></label>\n</div>\n",
+    "settings": [
+        {
+            "type": "item",
+            "id": "id_indicator",
+            "label": "boolean Indicator to display"
+        },
+        {
+            "type": "color",
+            "id": "color_on",
+            "label": "Color when ON"
+        },
+        {
+            "type": "color",
+            "id": "color_off",
+            "label": "Color when OFF"
+        }
+    ]
+}
